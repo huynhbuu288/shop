@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','App\Http\Controllers\HomeController@index');
 Route::get('/trang-chu', 'App\Http\Controllers\HomeController@index');
 
+//danh muc sp trang Chủ
+Route::get('/danh-muc-san-pham/{category_id}', 'App\Http\Controllers\CategoryProduct@show_category_home');
+Route::get('/thuong-hieu-san-pham/{brand_id}', 'App\Http\Controllers\BrandProduct@show_brand_home');
+Route::get('/chi-tiet-san-pham/{product_id}', 'App\Http\Controllers\ProductController@details_product');
+
+
+
 //database
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 Route::get('/dashboard', 'App\Http\Controllers\AdminController@show_dashboard');
@@ -60,7 +67,7 @@ Route::get('/unactive-product/{product_id}', 'App\Http\Controllers\ProductContro
 Route::get('/active-product/{product_id}', 'App\Http\Controllers\ProductController@active_product');
 
 Route::post('/save-product', 'App\Http\Controllers\ProductController@save_product');
-Route::put('/updata-product/{product_id}', 'App\Http\Controllers\ProductController@update_product');
+Route::post('/update-product/{product_id}', 'App\Http\Controllers\ProductController@update_product');
 
 
 

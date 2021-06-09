@@ -17,7 +17,9 @@
                     }
                          ?>
                     <div class="position-center">
-                        {!!Form::open(['action' => ['App\Http\Controllers\ProductController@save_product'], 'method' =>'POST'])!!}
+                       <form role="form" action="{{URL::to('save-product')}}" method="post" 
+                       enctype="multipart/form-data">
+                       {{ csrf_field() }}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Tên Sản Phẩm</label>
                             <input product="text" name="product_name"  class="form-control" 
@@ -48,26 +50,18 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Danh Mục Sản Phẩm</label>
                             <select name="product_cate" class="form-control input-sm m-bot15">
-                                <option value="0">Nam</option>
-                                <option value="1">Nữ</option>
-                                
-                                {{-- @foreach ($cate as $key=> $cate) --}}
-                                    
-                              
-                                {{-- <option value="{{($cate->menu_id)}}">{{($cate->menu_name)}}</option> --}}
-                                {{-- @endforeach --}}
+                                @foreach ($cate_product as $key=> $cate)
+                                <option value="{{ $cate->category_id }}">{{ $cate->category_name }}</option>
+                                @endforeach
                                
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Thương Hiệu Sản Phẩm</label>
-                            <select name="product_room" class="form-control input-sm m-bot15">
-                                {{-- @foreach ($room as $key=> $room)
-                                <option value="{{($room->room_id)}}">{{($room->room_name)}}</option>
-                                
-                                @endforeach --}}
-                                <option value="0">Nam</option>
-                                <option value="1">Nữ</option>
+                            <select name="product_brand" class="form-control input-sm m-bot15">
+                                @foreach ($brand_product as $key=> $brand)
+                                <option value="{{ $brand->brand_id }}">{{ $brand->brand_name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
@@ -79,7 +73,7 @@
                             </select>
                         </div>
                         <button product="submit" name="add_product" class="btn btn-info">Thêm Sản Phẩm</button>
-                        {!!Form::close()!!}
+                      </form>
                     </div>
 
                 </div>

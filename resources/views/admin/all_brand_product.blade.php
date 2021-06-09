@@ -64,7 +64,7 @@
               <?php
                 }else{
                 ?>  
-                  <a href="{{URL::to('/active-brand-product/'.$brand_pro->brand_id)}}"><span class="fa-thumb-styling fa fa-thumbs-down "></span>
+                  <a href="{{URL::to('/active-brand-product/'.$brand_pro->brand_id)}}"><span  class="fa-thumb-styling fa fa-thumbs-down "></span>
                   </a>
                   <?php
                 }

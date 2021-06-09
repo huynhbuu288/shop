@@ -4,7 +4,7 @@
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-     LIỆT KÊ Thương Hiệu SẢN PHẨM
+     LIỆT KÊ SẢN PHẨM
     </div>
     <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">
@@ -43,28 +43,35 @@
                 <input type="checkbox"><i></i>
               </label>
             </th>
-            <th>Tên Thương Hiệu</th>
+            <th>Tên Sản Phẩm</th>
+            <th>Gía Sản Phẩm</th>
+            <th>Hình Sản Phẩm</th>
+            <th>Danh Mục Sản Phẩm</th>
+            <th>Thương HiệuSản Phẩm</th>
             <th>Hiển Thị</th>
 
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-          @foreach($all_brand_product as $key => $brand_pro)
+          @foreach($all_product as $key => $pro)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
 
-            <td>{{ $brand_pro->brand_name  }}</td>
+            <td>{{ $pro->product_name  }}</td>
+            <td>{{ $pro->product_price }}</td>
+            <td><img src="public/uploads/product/{{ $pro->product_image }}" height="150" width="150" ></td>
+            <td>{{ $pro->category_name  }}</td>
+            <td>{{ $pro->product_name}}</td>
             <td><span class="text-ellipsis">
               <?php
-              if($brand_pro->brand_status ==0 ){
+              if($pro->product_status ==0 ){
               ?>
-              <a href="{{URL::to('/unactive-brand-product/'.$brand_pro->brand_id)}}"><span 
-              class="fa-thumb-styling fa fa-thumbs-up "></span></a>
+              <a href="{{URL::to('/unactive-product/'.$pro->product_id)}}"><span class="fa-thumb-styling fa fa-thumbs-up "></span></a>
               <?php
                 }else{
                 ?>  
-                  <a href="{{URL::to('/active-brand-product/'.$brand_pro->brand_id)}}"><span class="fa-thumb-styling fa fa-thumbs-down "></span>
+                  <a href="{{URL::to('/active-product/'.$pro->product_id)}}"><span class="fa-thumb-styling fa fa-thumbs-down "></span>
                   </a>
                   <?php
                 }
@@ -76,12 +83,12 @@
             </td>
             <td style="justify-content: center; display: flex;">
               
-              {!!Form::open(['action' => ['App\Http\Controllers\BrandProduct@edit_brand_product', $brand_pro->brand_id], 'method' =>'POST','class' =>'pull-right'])!!}
+              {!!Form::open(['action' => ['App\Http\Controllers\ProductController@edit_product', $pro->product_id], 'method' =>'POST','class' =>'pull-right'])!!}
               {{Form::hidden('_method','get')}}
               {{Form::submit('Edit',['class' => 'btn btn-success edit-btn'])}}
               {!!Form::close()!!}
            
-              {!!Form::open(['action' => ['App\Http\Controllers\BrandProduct@delete_brand_product', $brand_pro->brand_id], 'method' =>'POST','class' =>'pull-right'])!!}
+              {!!Form::open(['action' => ['App\Http\Controllers\ProductController@delete_product', $pro->product_id], 'method' =>'POST','class' =>'pull-right'])!!}
               {{Form::hidden('_method','DELETE')}}
               {{Form::submit('Delete',['class' => 'btn btn-danger delete-btn'])}}
               {!!Form::close()!!} 

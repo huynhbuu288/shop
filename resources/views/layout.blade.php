@@ -6,22 +6,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home </title>
-    <link href="{{('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{('assets/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{('assets/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{('assets/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{('assets/css/animate.css')}}" rel="stylesheet">
-	<link href="{{('assets/css/main.css')}}" rel="stylesheet">
-	<link href="{{('assets/css/responsive.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/animate.css')}}" rel="stylesheet">
+	<link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
+	<link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{('assets/images/ico/apple-touch-icon-144-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{('assets/images/ico/apple-touch-icon-114-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{('assets/images/ico/apple-touch-icon-72-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{('assets/images/ico/apple-touch-icon-57-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('assets/images/ico/apple-touch-icon-144-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('assets/images/ico/apple-touch-icon-114-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('assets/images/ico/apple-touch-icon-72-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('assets/images/ico/apple-touch-icon-57-precomposed.png')}}">
 </head><!--/head-->
 
 <body>
@@ -57,7 +57,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="{{URL::to('/trang-chu')}}"><img src="{{('assets/images/logo.png')}}" alt="" /></a>
+							<a href="{{URL::to('/trang-chu')}}"><img src="{{asset('assets/images/logo.png')}}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -112,24 +112,17 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{URL::to('/trang-chu')}}" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+								<li><a href="{{URL::to('/trang-chu')}}" class="active">Trang Chủ</a></li>
+								<li class="dropdown"><a href="#">Sản Phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
                                     </ul>
                                 </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
+								<li class="dropdown"><a href="#">Tin Tức<i class="fa fa-angle-down"></i></a>
+                                   
                                 </li> 
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="404.html">GIỎ Hàng</a></li>
+								<li><a href="contact-us.html">Liên Hệ</a></li>
 							</ul>
 						</div>
 					</div>
@@ -163,8 +156,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{('assets/images/girl1.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('assets/images/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('assets/images/girl1.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('assets/images/pricing.png')}}"  class="pricing" alt="" />
 								</div>
 							</div>
 							<div class="item">
@@ -175,8 +168,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{('assets/images/girl2.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('assets/images/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('assets/images/girl2.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('assets/images/pricing.png')}}"  class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -188,8 +181,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{('assets/images/girl3.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('assets/images/pricing.png')}}" class="pricing" alt="" />
+									<img src="{{asset('assets/images/girl3.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('assets/images/pricing.png')}}" class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -213,140 +206,30 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Category</h2>
+						<h2>Danh Mục Sản Phẩm</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							@foreach ($category as $key => $cate)
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Sportswear
-										</a>
-									</h4>
-								</div>
-								<div id="sportswear" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="#">Nike </a></li>
-											<li><a href="#">Under Armour </a></li>
-											<li><a href="#">Adidas </a></li>
-											<li><a href="#">Puma</a></li>
-											<li><a href="#">ASICS </a></li>
-										</ul>
-									</div>
+									<h4 class="panel-title"><a href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">
+										{{$cate->category_name}}</a></h4>
 								</div>
 							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
-											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Mens
-										</a>
-									</h4>
-								</div>
-								<div id="mens" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="#">Fendi</a></li>
-											<li><a href="#">Guess</a></li>
-											<li><a href="#">Valentino</a></li>
-											<li><a href="#">Dior</a></li>
-											<li><a href="#">Versace</a></li>
-											<li><a href="#">Armani</a></li>
-											<li><a href="#">Prada</a></li>
-											<li><a href="#">Dolce and Gabbana</a></li>
-											<li><a href="#">Chanel</a></li>
-											<li><a href="#">Gucci</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
-											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Womens
-										</a>
-									</h4>
-								</div>
-								<div id="womens" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul>
-											<li><a href="#">Fendi</a></li>
-											<li><a href="#">Guess</a></li>
-											<li><a href="#">Valentino</a></li>
-											<li><a href="#">Dior</a></li>
-											<li><a href="#">Versace</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Kids</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Fashion</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Households</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Interiors</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Clothing</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Bags</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Shoes</a></h4>
-								</div>
-							</div>
+							@endforeach
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
+							<h2>Thương Hiệu Sản Phẩm</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
-									<li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-									<li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-									<li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-									<li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-									<li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+									@foreach ($brand as $key => $brand)
+									<li><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}"> <span class="pull-right">(50)</span>
+										{{$brand->brand_name}}</a></li>
+									@endforeach
 								</ul>
 							</div>
 						</div><!--/brands_products-->
-						
-						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
-							<div class="well text-center">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-							</div>
-						</div><!--/price-range-->
-						
-						<div class="shipping text-center"><!--shipping-->
-							<img src="{{('assets/images/shipping.jpg')}}" alt="" />
-						</div><!--/shipping-->
+					
 					
 					</div>
 				</div>
@@ -377,7 +260,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('assets/images/iframe1.png')}}" alt="" />
+										<img src="{{asset('assets/images/iframe1.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -392,7 +275,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('assets/images/iframe2.png')}}" alt="" />
+										<img src="{{asset('assets/images/iframe2.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -407,7 +290,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('assets/images/iframe3.png')}}" alt="" />
+										<img src="{{asset('assets/images/iframe3.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -422,7 +305,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('assets/images/iframe4.png')}}" alt="" />
+										<img src="{{asset('assets/images/iframe4.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -435,7 +318,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="{{('assets/images/map.png')}}" alt="" />
+							<img src="{{asset('assets/images/map.png')}}" alt="" />
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>
@@ -522,11 +405,11 @@
 	
 
   
-    <script src="{{('assets/js/jquery.js')}}"></script>
-	<script src="{{('assets/js/bootstrap.min.js')}}"></script>
-	<script src="{{('assets/js/jquery.scrollUp.min.js')}}"></script>
-	<script src="{{('assets/js/price-range.js')}}"></script>
-    <script src="{{('assets/js/jquery.prettyPhoto.js')}}"></script>
-    <script src="{{('assets/js/main.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.js')}}"></script>
+	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('assets/js/jquery.scrollUp.min.js')}}"></script>
+	<script src="{{asset('assets/js/price-range.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 </html>

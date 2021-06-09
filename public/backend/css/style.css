@@ -49,16 +49,21 @@ body a:hover{
     -o-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
+span.fa.fa-thumbs-up {
+    color:green; 
+     font-size: 28px;
+}
+span.fa.fa-thumbs-down {
+    color:red; 
+     font-size: 28px;
+}
 
 
-span.fa.fa-thumbs-up {
-    color: red;
-    font-size: 28px;
-}
-span.fa.fa-thumbs-up {
-    color: red;
-    font-size: 28px;
-}
+
+
+
+
+
 .fa-edit:before, .fa-pencil-square-o:before {
     content: "\f044";
     font-size: 20px;
