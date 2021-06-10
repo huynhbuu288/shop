@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
 @foreach($product_details as $key => $value)
 <div class="product-details"><!--product-details-->
     <div class="col-sm-5">
@@ -33,19 +34,23 @@
     </div>
     <div class="col-sm-7">
         <div class="product-information"><!--/product-information-->
-            <img src="{{asset('assetsimages/product-details/new.jpg')}}" class="newarrival" alt="" />
+            <img src="{{asset('assets/images/product-details/new.jpg')}}" class="newarrival" alt="" />
             <h2>{{$value->product_name}}</h2>
             <p>MÃ ID: {{$value->product_id}}</p>
             <img src="{{asset('/assets/images/rating.png')}}" alt="" />
-            <span>
+            <form action="{{URL::to('/save-cart')}}" method="post" >
+                {{ csrf_field() }}
+                <span>
                 <span>{{$value->product_price}}.VNĐ</span>
-                <label>Quantity:</label>
-                <input type="number" min="1" max=""value="1" />
-                <button type="button" class="btn btn-fefault cart">
+                <label>Số Lượng:</label>
+                <input name="qty" type="number" min="1" max=""value="1" />
+                <input name="productid_hidden" type="hidden" value="{{$value->product_id}}" />
+                <button type="submit" class="btn btn-fefault cart">
                     <i class="fa fa-shopping-cart"></i>
                     Thêm giỏ hàng
                 </button>
             </span>
+        </form>
             <p><b>Tình Trạng:</b> Còn hàng</p>
             <p><b>Điều kiện:</b> Mới 100%</p>
             <p><b>Thương Hiệu:</b>{{$value->brand_name}}</p>
@@ -103,35 +108,35 @@
         
     </div>
 </div><!--/category-tab-->
+
 @endforeach
 
 
 
 
-
 <div class="recommended_items"><!--recommended_items-->
-    <h2 class="title text-center">Sản Phẩm LIÊN QUAN</h2>
+    <h2 class="title text-center">SẢN PHẨM LIÊN QUAN</h2>
     
     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="item active">	
-               @foreach ($related as $key => $lienquan)
+                @foreach ($relate as $key => $lienquan)
+                
                 <div class="col-sm-4">
                     <div class="product-image-wrapper">
-                        <div class="single-products">
+                        <<div class="single-products">
                             <div class="productinfo text-center">
                                 <img src="{{URL::to('public/uploads/product/'.$lienquan->product_image)}}" alt="">
                                 <h2>{{($lienquan->product_price).' '.'VND'}}</h2>
                                 <p>{{$lienquan->product_name}}</p>
                                 <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm Gio Hàng</a>
                             </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
-               @endforeach
-                
+                @endforeach
             </div>
-         
+            
         </div>
          <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
             <i class="fa fa-angle-left"></i>
