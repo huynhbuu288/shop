@@ -33,7 +33,7 @@ class CartController extends Controller
     }
     public function delete_to_cart($rowId){
         Cart::update($rowId,0);
-        return Redirect::to('/show-cart');
+        return Redirect::to('/payment');
 
     }
     public function update_cart_quantity(Request $request){

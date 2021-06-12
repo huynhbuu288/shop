@@ -15,7 +15,7 @@
         <div class="register-req">
             <p>Làm ơn đăng kí hoặc đăng nhập để thanh toán giỏ hàng và xem lại lịch sử mua hàng!</p>
         </div><!--/register-req-->
-
+        @foreach ($customer as $kh)
         <div class="shopper-informations">
             <div class="row">
                 
@@ -23,13 +23,15 @@
                     <div class="bill-to">
                         <p>Điền Thông Tin Gửi Hàng</p>
                         <div class="form-one">
-                            <form action="{{URL::to('/save-checkout-customer')}}" method="post">
+                          
+                            <form action="{{URL::to('/save-checkout-customer/'.$kh->customer_id)}}" method="post">
                                 {{ csrf_field() }}
+                              
                                 <input type="text" name="shipping_email" placeholder="Email*">
                                 <input type="text" name="shipping_name" placeholder="Họ và tên *">
                                 <input type="text" name="shipping_address" placeholder="Địa Chỉ *">
                                 <input type="text" name="shipping_phone" placeholder="Điện Thoại *">
-                                <textarea name="shipping_notes"  placeholder="Ghi chú đơn hàng của bạn" rows="16"></textarea>
+                                <textarea   placeholder="Ghi chú đơn hàng của bạn" rows="16"></textarea>
                                 <input type="submit" value="Gửi" name="send_order" class="btn btn-primary btn-sm">
                             </form>
                         </div>
@@ -39,6 +41,8 @@
               		
             </div>
         </div>
+        @endforeach
+
         <div class="review-payment">
             <h2>Xem lại giỏ hàng</h2>
         </div> 

@@ -90,30 +90,36 @@
 								<li><a href="#"><i class="fa fa-star"></i> Yêu Thích</a></li>
 								<?php
 								$customer_id = Session::get('customer_id');
-								if($customer_id!=NULL){
+								$shipping_id = Session::get('shipping_id');
+								if($customer_id!=NULL && $shipping_id!==NULL){
 								?>
 									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh Toán</a></li>
 								<?php
-								}else {
+								}elseif ($customer_id!=NULL && $shipping_id!=NULL){
+									
 								?>
-									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Thanh Toán</a></li>
+								<li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i> Thanh Toán</a></li>
+								<?php
+								}else{
+								?>
+								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Thanh Toán</a></li>
 								<?php
 								}
 								?>
+
 							
 								<li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> GIỎ Hàng</a></li>
-								<?php
-								$customer_id = Session::get('customer_id');
-								if($customer_id!=NULL){
-								?>
-								<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng Xuất</a></li>
-								<?php
-								}else {
-								?>
-								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
-								<?php
-								}
-								?>
+
+								@if(Auth::guest())
+									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng Nhập</a></li>
+								
+								
+								@else 
+									<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng Xuất</a></li>
+								
+								@endif
+								
+								
 							</ul>
 						</div>
 					</div>
