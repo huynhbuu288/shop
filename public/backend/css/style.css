@@ -24,7 +24,6 @@ body a{
 	-ms-transition: 0.5s all ease;
 	text-decoration:none;
 }
-
 h1,h2,h3,h4,h5,h6{
 	margin:0;			   
 }
@@ -38,6 +37,7 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+
 	/*sidebar navigation*/
 #sidebar {
     width:240px;
@@ -49,27 +49,15 @@ body a:hover{
     -o-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
-span.fa.fa-thumbs-up {
-    color:green; 
-     font-size: 28px;
+span.fa-thumb-styling.fa.fa-thumbs-down {
+    font-size: 28px;
+    color: red;
 }
-span.fa.fa-thumbs-down {
-    color:red; 
-     font-size: 28px;
+span.fa-thumb-styling.fa.fa-thumbs-up {
+    font-size: 28px;
+    color: green;
 }
-
-
-
-
-
-
-
-.fa-edit:before, .fa-pencil-square-o:before {
-    content: "\f044";
-    font-size: 20px;
-}
-.fa-remove:before, .fa-close:before, .fa-times:before {
-    content: "\f00d";
+a.active.styling-edit {
     font-size: 20px;
 }
 #sidebar ul li {
@@ -1864,7 +1852,7 @@ select.input-sm {
     height: 21px;
     width: 95px;
     position: relative;
-
+    float: left;
     margin-top: 11px;
 }
 .badge.bg-important {
@@ -2535,8 +2523,8 @@ div#chartContainer5,div#chartContainer6,div#chartContainer7,div#chartContainer8 
     height:150px;
     margin-top:20px;
 }
-
-
+canvas.canvasjs-chart-canvas {
+}
 .chart_agile_bottom{
 	padding:20px;
 	background:#fff;
@@ -3167,4 +3155,11 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
 .chart_agile_bottom {
     padding: 0;
 }
+}
+span.text-alert {
+    color: red;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
 }
